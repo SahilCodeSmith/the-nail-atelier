@@ -5,6 +5,11 @@ import { Section, SectionHeading } from "@/components/ui/layout-primitives";
 import { GalleryExperience } from "@/components/gallery/gallery-experience";
 import { ButtonLink } from "@/components/ui/button";
 
+// Client-side filtering reads/writes the URL via useSearchParams(); the
+// static build silently froze this route on its loading.tsx fallback
+// (Next never surfaced an error), so render it per-request instead.
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = buildMetadata({
   title: "Portfolio",
   description:

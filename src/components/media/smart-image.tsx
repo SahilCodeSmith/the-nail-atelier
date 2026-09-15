@@ -52,7 +52,10 @@ export function SmartImage({
 
   const wrapperClass = cn(
     "relative overflow-hidden bg-mist",
-    !fill && "w-full",
+    // In fill mode this wrapper's only children are absolutely positioned
+    // (skeleton, <Image fill>, wash), so auto height would collapse to 0 —
+    // it must explicitly fill its own already-sized positioned ancestor.
+    fill ? "h-full w-full" : "w-full",
     className,
   );
 
