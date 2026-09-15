@@ -7,8 +7,10 @@ import { DesignCard } from "@/components/marketing/design-card";
 import {
   designs,
   GALLERY_CATEGORIES,
+  CATEGORY_ACCENT,
   type DesignCategory,
 } from "@/lib/data/designs";
+import { ACCENT_CHIP_ACTIVE } from "@/lib/config/accent";
 import { SIZES } from "@/lib/data/images";
 import { cn } from "@/lib/utils";
 
@@ -28,10 +30,12 @@ function Chip({
   active,
   children,
   onClick,
+  activeClassName = "border-lacquer bg-lacquer text-bone",
 }: {
   active: boolean;
   children: React.ReactNode;
   onClick: () => void;
+  activeClassName?: string;
 }) {
   return (
     <button
@@ -39,10 +43,8 @@ function Chip({
       onClick={onClick}
       aria-pressed={active}
       className={cn(
-        "rounded-xs border px-3.5 py-2 font-sans text-[0.8125rem] tracking-[0.01em] transition-colors duration-150",
-        active
-          ? "border-ink bg-ink text-bone"
-          : "border-sand bg-porcelain text-char hover:border-greige",
+        "rounded-xs border px-3.5 py-2 font-sans text-[0.8125rem] tracking-[0.01em] transition-[color,background-color,border-color,transform] duration-150 active:scale-[0.96] motion-reduce:active:scale-100",
+        active ? activeClassName : "border-sand bg-porcelain text-char hover:border-greige",
       )}
     >
       {children}
@@ -81,7 +83,14 @@ export function DesignFinder() {
             </legend>
             <div className="flex flex-wrap gap-2">
               {GALLERY_CATEGORIES.map((c) => (
-                <Chip key={c.slug} active={cat === c.slug} onClick={() => setCat(c.slug)}>
+                <Chip
+                  key={c.slug}
+                  active={cat === c.slug}
+                  onClick={() => setCat(c.slug)}
+                  activeClassName={
+                    c.slug === "all" ? undefined : ACCENT_CHIP_ACTIVE[CATEGORY_ACCENT[c.slug]]
+                  }
+                >
                   {c.label}
                 </Chip>
               ))}

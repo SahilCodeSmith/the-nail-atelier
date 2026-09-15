@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Fraunces, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
+import { MotionConfig } from "motion/react";
 import "./globals.css";
 
 import { buildMetadata } from "@/lib/config/seo";
@@ -51,12 +52,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <noscript>
           <style>{`.reveal{opacity:1 !important;transform:none !important}`}</style>
         </noscript>
-        <SkipLink />
-        <OrganizationJsonLd />
-        <SiteHeader />
-        <main id="main">{children}</main>
-        <SiteFooter />
-        <FloatingContact />
+        <MotionConfig reducedMotion="user">
+          <SkipLink />
+          <OrganizationJsonLd />
+          <SiteHeader />
+          <main id="main">{children}</main>
+          <SiteFooter />
+          <FloatingContact />
+        </MotionConfig>
       </body>
     </html>
   );

@@ -5,7 +5,7 @@ import { ArrowRight, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "group/btn inline-flex items-center justify-center gap-2.5 rounded-xs font-sans font-medium leading-none transition-[background-color,color,border-color] duration-200 ease-standard focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:pointer-events-none disabled:opacity-60",
+  "group/btn inline-flex items-center justify-center gap-2.5 rounded-xs font-sans font-medium leading-none transition-[background-color,color,border-color,transform] duration-200 ease-standard focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-[0.97] motion-reduce:active:scale-100 disabled:pointer-events-none disabled:opacity-60",
   {
     variants: {
       variant: {

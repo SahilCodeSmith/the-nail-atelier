@@ -15,6 +15,7 @@ export function SiteFooter() {
 
   return (
     <footer className="bg-espresso text-bone">
+      <div className="u-swatch-bar" aria-hidden />
       {/* Concierge CTA */}
       <div className="u-container border-b border-white/10 py-section">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">

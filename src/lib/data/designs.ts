@@ -32,6 +32,20 @@ export const GALLERY_CATEGORIES: { slug: DesignCategory | "all"; label: string }
     { slug: "extensions", label: "Extensions" },
   ];
 
+/** One signature accent per style direction — the gallery's polish-rack colour code. */
+export const CATEGORY_ACCENT: Record<DesignCategory, "lacquer" | "coral" | "champagne" | "teal" | "plum"> = {
+  minimal: "teal",
+  bridal: "champagne",
+  chrome: "plum",
+  glitter: "coral",
+  floral: "lacquer",
+  abstract: "teal",
+  "3d": "plum",
+  french: "champagne",
+  custom: "coral",
+  extensions: "lacquer",
+};
+
 export const CATEGORY_LABEL: Record<DesignCategory, string> = {
   minimal: "Minimal",
   bridal: "Bridal",

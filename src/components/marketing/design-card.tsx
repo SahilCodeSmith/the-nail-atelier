@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { SmartImage } from "@/components/media/smart-image";
-import { CATEGORY_LABEL, type DesignItem } from "@/lib/data/designs";
+import { CATEGORY_ACCENT, CATEGORY_LABEL, type DesignItem } from "@/lib/data/designs";
+import { ACCENT_DOT, ACCENT_GROUP_HOVER_TEXT } from "@/lib/config/accent";
 import { SIZES } from "@/lib/data/images";
 import { cn } from "@/lib/utils";
 
@@ -23,6 +24,7 @@ export function DesignCard({
   className?: string;
 }) {
   const pad = `${CROP_RATIO[design.crop] * 100}%`;
+  const accent = CATEGORY_ACCENT[design.category];
   return (
     <Link
       href={`/book?design=${design.id}`}
@@ -58,7 +60,8 @@ export function DesignCard({
         <div className="flex flex-col gap-1">
           <div className="flex items-baseline gap-2.5">
             <h3 className="font-display text-d-sm text-ink">{design.title}</h3>
-            <span className="font-sans text-[0.625rem] uppercase tracking-[0.16em] text-greige">
+            <span className="inline-flex items-center gap-1.5 font-sans text-[0.625rem] uppercase tracking-[0.16em] text-greige">
+              <span className={cn("size-1.5 rounded-full", ACCENT_DOT[accent])} aria-hidden />
               {CATEGORY_LABEL[design.category]}
             </span>
           </div>
@@ -67,7 +70,10 @@ export function DesignCard({
           </p>
         </div>
         <ArrowUpRight
-          className="mt-1 size-4 shrink-0 text-greige transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-lacquer"
+          className={cn(
+            "mt-1 size-4 shrink-0 text-greige transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5",
+            ACCENT_GROUP_HOVER_TEXT[accent],
+          )}
           aria-hidden
         />
       </div>

@@ -14,8 +14,8 @@
     --panel: #ece6db;
     --hairline: #ded6c7;
     --text: #1a1613;
-    --accent: #6b1f2a;
-    --metal: #b7a183;
+    --accent: #e31c6b;
+    --metal: #e8a631;
 
     --nav-h: 60px;
     --ease: cubic-bezier(0.16, 1, 0.3, 1);
@@ -150,6 +150,19 @@
   .u-underline:hover,
   .u-underline:focus-visible {
     background-size: 100% 1px;
+  }
+
+  /* Signature multi-hue hairline — the atelier's polish-rack accent */
+  .u-swatch-bar {
+    height: 4px;
+    background-image: linear-gradient(
+      90deg,
+      theme("colors.lacquer.DEFAULT") 0%,
+      theme("colors.coral.DEFAULT") 25%,
+      theme("colors.champagne.DEFAULT") 50%,
+      theme("colors.teal.DEFAULT") 75%,
+      theme("colors.plum.DEFAULT") 100%
+    );
   }
 
   /* Fine grain overlay for hero / dark plates */

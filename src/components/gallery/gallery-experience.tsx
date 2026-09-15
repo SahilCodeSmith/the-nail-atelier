@@ -9,9 +9,11 @@ import { SmartImage } from "@/components/media/smart-image";
 import {
   designs,
   GALLERY_CATEGORIES,
+  CATEGORY_ACCENT,
   CATEGORY_LABEL,
   type DesignCategory,
 } from "@/lib/data/designs";
+import { ACCENT_CHIP_ACTIVE, ACCENT_CHIP_ACTIVE_MUTED, ACCENT_DOT } from "@/lib/config/accent";
 import { SIZES } from "@/lib/data/images";
 import { cn } from "@/lib/utils";
 
@@ -61,6 +63,7 @@ export function GalleryExperience() {
         >
           {GALLERY_CATEGORIES.map((c) => {
             const active = cat === c.slug;
+            const accent = c.slug === "all" ? null : CATEGORY_ACCENT[c.slug];
             return (
               <button
                 key={c.slug}
@@ -68,9 +71,11 @@ export function GalleryExperience() {
                 aria-selected={active}
                 onClick={() => selectCat(c.slug)}
                 className={cn(
-                  "shrink-0 snap-start rounded-xs border px-3.5 py-1.5 font-sans text-[0.8125rem] tracking-[0.02em] transition-colors duration-150",
+                  "shrink-0 snap-start rounded-xs border px-3.5 py-1.5 font-sans text-[0.8125rem] tracking-[0.02em] transition-[color,background-color,border-color,transform] duration-150 active:scale-[0.96] motion-reduce:active:scale-100",
                   active
-                    ? "border-ink bg-ink text-bone"
+                    ? accent
+                      ? ACCENT_CHIP_ACTIVE[accent]
+                      : "border-ink bg-ink text-bone"
                     : "border-sand bg-transparent text-char hover:border-greige",
                 )}
               >
@@ -78,7 +83,11 @@ export function GalleryExperience() {
                 <span
                   className={cn(
                     "ml-1.5 font-mono text-[0.625rem]",
-                    active ? "text-bone/60" : "text-greige",
+                    active
+                      ? accent
+                        ? ACCENT_CHIP_ACTIVE_MUTED[accent]
+                        : "text-bone/60"
+                      : "text-greige",
                   )}
                 >
                   {counts[c.slug]}
@@ -130,7 +139,11 @@ export function GalleryExperience() {
             </button>
             <figcaption className="mt-3 flex items-baseline justify-between gap-3 border-t border-sand pt-2.5">
               <span className="font-sans text-[0.8125rem] text-char">{d.title}</span>
-              <span className="font-sans text-[0.625rem] uppercase tracking-[0.16em] text-greige">
+              <span className="inline-flex items-center gap-1.5 font-sans text-[0.625rem] uppercase tracking-[0.16em] text-greige">
+                <span
+                  className={cn("size-1.5 rounded-full", ACCENT_DOT[CATEGORY_ACCENT[d.category]])}
+                  aria-hidden
+                />
                 {CATEGORY_LABEL[d.category]}
               </span>
             </figcaption>
