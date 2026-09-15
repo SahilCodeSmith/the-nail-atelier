@@ -11,9 +11,9 @@ import { ButtonLink } from "@/components/ui/button";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Portfolio",
+  title: "Nail Art Designs — Portfolio",
   description:
-    "An editorial gallery of nail-art directions — minimal, bridal, chrome, floral, abstract, 3D, French and bespoke. Every look opens straight into a home-visit booking.",
+    "Browse nail art designs and manicure styles — minimal, bridal, chrome, floral, abstract, 3D, French and bespoke hand nail art. Every design opens straight into a home-visit manicure or pedicure booking.",
   path: "/gallery",
 });
 

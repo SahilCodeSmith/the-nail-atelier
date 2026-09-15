@@ -39,9 +39,9 @@ export const siteConfig = {
   // ---- Positioning -----------------------------------------------------
   tagline: "Luxury nail artistry, brought to your doorstep.",
   descriptionShort:
-    "A home-visit nail-art atelier. Bespoke sets, hand-finished by Rakshit, in the comfort of your own space.",
+    "A home-visit nail art, manicure & pedicure atelier. Bespoke nail designs, hand-finished by Rakshit, in the comfort of your own space.",
   descriptionLong:
-    "The Nail Atelier is a private, home-visit nail-art practice led by Rakshit. Every appointment is a considered ritual — a bespoke design consultation, meticulous preparation, and hand-finished artistry — delivered to your door.",
+    "The Nail Atelier is a private, home-visit nail art, manicure and pedicure practice led by Rakshit. Every appointment is a considered ritual — a bespoke nail design consultation, meticulous preparation, and hand-finished artistry on hands and feet — delivered to your door.",
 
   // ---- Service area (PLACEHOLDER) -------------------------------------
   // The brand has not confirmed cities/zones. Keep vague copy in components

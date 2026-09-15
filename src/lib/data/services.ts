@@ -123,6 +123,7 @@ export const services: ServiceItem[] = [
     durationNote: "≈ 60–75 min",
     priceNote: PRICE_PLACEHOLDER,
     imageId: "still-polish-shelf",
+    featured: true,
   },
   {
     slug: "safe-removal",

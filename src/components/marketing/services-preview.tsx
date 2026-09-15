@@ -15,8 +15,8 @@ export function ServicesPreview() {
       <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <SectionHeading
           eyebrow="Services"
-          title="What we can do at your table"
-          lede="Every service is delivered at a home visit. Design and finish are shaped to your hands and your week."
+          title="Manicure, pedicure & nail art at your table"
+          lede="Every manicure, pedicure and nail art design is delivered at a home visit. Design and finish are shaped to your hands, feet and your week."
         />
         <ButtonLink href="/book" variant="link" size="md" className="shrink-0">
           Start a booking
@@ -73,7 +73,7 @@ export function ServicesPreview() {
 
       <Reveal className="mt-10">
         <p className="font-mono text-meta text-greige">
-          Pedicure Ritual and Safe Removal are also available — ask when you book.
+          Safe Removal for existing gel or extensions is also available — ask when you book.
         </p>
       </Reveal>
     </Section>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "./site";
+import { services } from "@/lib/data/services";
 
 const baseUrl = siteConfig.url;
 
@@ -19,19 +20,52 @@ export function buildMetadata(opts?: {
     title: title
       ? { absolute: `${title} · ${siteConfig.name}` }
       : {
-          default: `${siteConfig.name} — ${siteConfig.tagline}`,
+          default: `${siteConfig.name} — Home-Visit Nail Art, Manicure & Pedicure`,
           template: `%s · ${siteConfig.name}`,
         },
     description,
     applicationName: siteConfig.name,
     authors: [{ name: siteConfig.artist.name }],
     keywords: [
+      // Core service
       "home visit nail artist",
+      "home visit manicure",
+      "home visit pedicure",
+      "mobile nail salon",
+      "nail artist at home",
+      "manicure at home",
+      "pedicure at home",
+      "nail salon at home",
+      "on demand manicure pedicure",
+      // Nail art / design
+      "nail art",
+      "nail art designs",
+      "nail designs",
+      "designs on nails",
+      "hand nail art",
+      "custom nail art",
+      "bespoke nail art",
+      "nail art at home",
+      // Techniques / finishes
+      "gel manicure",
+      "gel extensions at home",
+      "nail extensions",
+      "acrylic nails",
+      "builder gel nails",
+      "chrome nails",
+      "french manicure",
+      "3D nail art",
+      "glitter nails",
+      "matte nails",
+      // Occasions
+      "bridal nails",
+      "bridal nail art",
+      "party nail art",
+      // Brand
       "luxury nail art",
       "bespoke manicure",
       "nail atelier",
-      "gel extensions at home",
-      "bridal nails",
+      siteConfig.name,
     ],
     alternates: { canonical: url },
     robots: opts?.noindex
@@ -58,7 +92,7 @@ export function buildMetadata(opts?: {
 export function organizationJsonLd() {
   return {
     "@context": "https://schema.org",
-    "@type": "HealthAndBeautyBusiness",
+    "@type": "NailSalon",
     name: siteConfig.name,
     description: siteConfig.descriptionLong,
     url: siteConfig.url,
@@ -69,20 +103,29 @@ export function organizationJsonLd() {
     priceRange: "On consultation",
     knowsAbout: [
       "Nail art",
+      "Nail art designs",
+      "Manicure",
+      "Pedicure",
       "Gel manicure",
       "Nail extensions",
+      "Acrylic nails",
+      "Chrome nails",
+      "French manicure",
+      "3D nail art",
       "Bridal nails",
+      "Home-visit beauty services",
     ],
     // areaServed / address intentionally omitted until confirmed by the brand.
-    makesOffer: {
+    makesOffer: services.map((s) => ({
       "@type": "Offer",
       itemOffered: {
         "@type": "Service",
-        name: "Home-visit nail artistry",
+        name: s.name,
+        description: s.description,
         serviceType: "Mobile nail salon",
         provider: { "@type": "Organization", name: siteConfig.name },
       },
-    },
+    })),
   };
 }
 
