@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 
 export function OccasionsPreview() {
   return (
-    <Section id="occasions" ground="bone" space="lg" aria-label="Occasions">
+    <Section id="occasions" ground="gold" space="lg" aria-label="Occasions">
       <SectionHeading
         eyebrow="Occasions"
         title="Booked around the moment it's for"

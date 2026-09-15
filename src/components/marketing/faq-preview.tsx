@@ -13,7 +13,7 @@ import { whatsappHref, generalEnquiryMessage } from "@/lib/whatsapp";
 export function FaqPreview() {
   const shown = faqs.slice(0, 6);
   return (
-    <Section id="faq" ground="porcelain" space="lg" aria-label="Questions">
+    <Section id="faq" ground="lavender" space="lg" aria-label="Questions">
       <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
         <div className="flex flex-col gap-6 lg:sticky lg:top-28 lg:self-start">
           <SectionHeading eyebrow="Questions" title="The things people ask first" />

@@ -4,7 +4,7 @@ import { homeVisitSteps, assurances } from "@/lib/data/experience";
 
 export function HomeVisit() {
   return (
-    <Section id="experience" ground="mist" space="lg" aria-label="The home visit">
+    <Section id="experience" ground="mint" space="lg" aria-label="The home visit">
       <SectionHeading
         eyebrow="The home visit"
         title="Five unhurried steps, door to doorstep"

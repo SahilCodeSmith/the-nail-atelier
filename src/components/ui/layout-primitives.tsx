@@ -14,7 +14,16 @@ export function Container({
   return <Tag className={cn("u-container", className)}>{children}</Tag>;
 }
 
-type Ground = "bone" | "porcelain" | "mist" | "espresso";
+type Ground =
+  | "bone"
+  | "porcelain"
+  | "mist"
+  | "espresso"
+  | "rose"
+  | "coral"
+  | "mint"
+  | "lavender"
+  | "gold";
 type Space = "sm" | "md" | "lg" | "none";
 
 const groundClass: Record<Ground, string> = {
@@ -22,6 +31,12 @@ const groundClass: Record<Ground, string> = {
   porcelain: "bg-porcelain text-ink",
   mist: "bg-mist text-ink",
   espresso: "bg-espresso text-bone [&_h1]:text-bone [&_h2]:text-bone [&_h3]:text-bone",
+  // Signature tinted grounds — soft washes of the polish-rack accents.
+  rose: "bg-lacquer-tint text-ink",
+  coral: "bg-coral-tint text-ink",
+  mint: "bg-teal-tint text-ink",
+  lavender: "bg-plum-tint text-ink",
+  gold: "bg-champagne-tint text-ink",
 };
 
 const spaceClass: Record<Space, string> = {

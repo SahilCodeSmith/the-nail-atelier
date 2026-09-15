@@ -22,7 +22,7 @@ export function PortfolioPreview() {
   ) as (typeof designs)[number][];
 
   return (
-    <Section id="portfolio" ground="bone" space="lg" aria-label="Portfolio">
+    <Section id="portfolio" ground="lavender" space="lg" aria-label="Portfolio">
       <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <SectionHeading
           eyebrow="Portfolio"

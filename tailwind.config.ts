@@ -12,11 +12,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bone: "#F5F1EA",
-        porcelain: "#FCFBF8",
-        mist: "#ECE6DB",
-        sand: "#DED6C7",
-        greige: "#9A9082",
+        bone: "#FAF6F2",
+        porcelain: "#FFFFFF",
+        mist: "#F1ECE5",
+        sand: "#E6DED5",
+        greige: "#96897E",
         ink: "#1A1613",
         espresso: "#26211C",
         char: "#3B342C",
@@ -28,6 +28,7 @@ const config: Config = {
         champagne: {
           DEFAULT: "#E8A631",
           light: "#F6C868",
+          tint: "#FBEDD4",
         },
         coral: {
           DEFAULT: "#FF5A45",

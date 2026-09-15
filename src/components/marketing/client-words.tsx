@@ -4,7 +4,7 @@ import { testimonials, hasTestimonials } from "@/lib/data/testimonials";
 
 export function ClientWords() {
   return (
-    <Section id="words" ground="bone" space="lg" aria-label="Client words">
+    <Section id="words" ground="rose" space="lg" aria-label="Client words">
       <Reveal className="mx-auto flex max-w-prose flex-col items-center gap-8 text-center">
         <Eyebrow className="u-eyebrow--center">Client words</Eyebrow>
 

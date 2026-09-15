@@ -7,7 +7,7 @@ import { SIZES } from "@/lib/data/images";
 
 export function AboutPreview() {
   return (
-    <Section id="about" ground="mist" space="lg" aria-label="About Rakshit">
+    <Section id="about" ground="mint" space="lg" aria-label="About Rakshit">
       <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-20">
         <Reveal className="order-last lg:order-first">
           <figure className="flex flex-col gap-3">

@@ -15,7 +15,7 @@ export default function OpengraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#F5F1EA",
+          background: "#FAF6F2",
           padding: "80px",
           fontFamily: "Georgia, serif",
         }}
@@ -46,7 +46,7 @@ export default function OpengraphImage() {
             display: "flex",
             fontSize: 22,
             letterSpacing: "0.04em",
-            color: "#6B1F2A",
+            color: "#E31C6B",
           }}
         >
           {`Home visits by appointment  ·  ${siteConfig.contact.phoneDisplay}`}

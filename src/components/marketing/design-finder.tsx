@@ -68,7 +68,7 @@ export function DesignFinder() {
   const galleryHref = cat === "all" ? "/gallery" : `/gallery?category=${cat}`;
 
   return (
-    <Section id="finder" ground="porcelain" space="lg" aria-label="Design finder">
+    <Section id="finder" ground="coral" space="lg" aria-label="Design finder">
       <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <div className="flex flex-col gap-8">
           <SectionHeading

@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 
 export function ServicesPreview() {
   return (
-    <Section id="services" ground="bone" space="lg" aria-label="Services">
+    <Section id="services" ground="rose" space="lg" aria-label="Services">
       <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <SectionHeading
           eyebrow="Services"

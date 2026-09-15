@@ -5,7 +5,7 @@ import { SIZES } from "@/lib/data/images";
 
 export function BrandStatement() {
   return (
-    <Section ground="bone" space="lg" aria-label="The atelier">
+    <Section ground="gold" space="lg" aria-label="The atelier">
       <div className="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-end lg:gap-20">
         <Reveal className="flex flex-col gap-8">
           <Eyebrow>The atelier</Eyebrow>

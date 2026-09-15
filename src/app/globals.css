@@ -9,10 +9,10 @@
 
 @layer base {
   :root {
-    --page: #f5f1ea;
-    --surface: #fcfbf8;
-    --panel: #ece6db;
-    --hairline: #ded6c7;
+    --page: #faf6f2;
+    --surface: #ffffff;
+    --panel: #f1ece5;
+    --hairline: #e6ded5;
     --text: #1a1613;
     --accent: #e31c6b;
     --metal: #e8a631;
